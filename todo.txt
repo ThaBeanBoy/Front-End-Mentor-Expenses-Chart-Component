@@ -1,0 +1,17 @@
+<> Graph component:
+    >< Value should display on click
+    <> Value should display on hover
+    <> Animate the graph
+
+<> Add an alert box of dev notes
+    <> Make a clickable button that opens the dev notes
+    <> The challenge
+    <> The click feature
+    <> The hover feature
+    <> Talk about sprinkling in some accessibilty functions
+    <> Tak about animations
+
+    <> Make a comments section
+        <> Login / Sign Up
+        <> Delete account
+        <> Make comment

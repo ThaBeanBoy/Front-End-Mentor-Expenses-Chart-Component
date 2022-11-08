@@ -1,0 +1,13 @@
+<> graph component
+<> graph component in use
+<> graphs stylings
+<> sass mixins
+<> sass mixins in use
+
+<>flex box, row reverse stuff, because there is no selector for previous sibling,
+    So in order to alleviate the problem, I just made it flex-direction: row-reverse.
+    That way, the progress bar & the value are in the right order, & I can still use the + 
+    selector.
+    This removed the need for the useState. 
+
+<> The cool 1 liner that got the maximum value from the data

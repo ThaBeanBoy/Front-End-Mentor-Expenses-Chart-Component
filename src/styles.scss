@@ -1,0 +1,178 @@
+$Soft-red: hsl(10, 79%, 65%);
+$Cyan: hsl(186, 34%, 60%);
+// Neutral
+$Dark-brown: hsl(25, 47%, 15%);
+$Medium-brown: hsl(28, 10%, 53%);
+$Cream: hsl(27, 66%, 92%);
+$Very-pale-orange: hsl(33, 100%, 98%);
+
+$font-size-big: 32px;
+$font-size-big-mobile: 24px;
+
+@mixin responsive-mixin($css-property, $desktop-font-size, $mobile-font-size) {
+  #{$css-property}: $desktop-font-size;
+  @media screen and (max-width: 548px) {
+    #{$css-property}: $mobile-font-size;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $Cream;
+
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .stats {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 16px;
+
+    header {
+      background-color: $Soft-red;
+      color: $Cream;
+      padding: 32px;
+      border-radius: 18px;
+      margin-bottom: 24px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        @include responsive-mixin(
+          font-size,
+          $font-size-big,
+          $font-size-big-mobile
+        );
+
+        transition: 0.25s;
+      }
+
+      p {
+        margin-bottom: 12px;
+      }
+    }
+
+    main {
+      background-color: $Very-pale-orange;
+      border-radius: 16px;
+      padding: 52px 32px;
+
+      h2 {
+        @include responsive-mixin(
+          font-size,
+          $font-size-big,
+          $font-size-big-mobile
+        );
+
+        transition: 0.25s;
+      }
+
+      .graphs {
+        display: flex;
+        justify-content: space-between;
+
+        .dayStat {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .wrapper {
+            height: 150px + 40px; //This is a combination of the height of the wrapper & the height of the value box
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .value {
+              background-color: $Dark-brown;
+              color: $Cream;
+              font-weight: 700;
+              padding: 8px;
+              margin-bottom: 8px;
+              border-radius: 4px;
+
+              transition: 0.25s;
+            }
+
+            .progress {
+              @include responsive-mixin(width, 50px, 32px);
+
+              background-color: $Soft-red;
+              border-radius: 4px;
+              transition: 0.25s;
+
+              &.max {
+                background-color: $Cyan;
+              }
+
+              &:hover {
+                filter: brightness(1.25);
+                width: 100%;
+              }
+            }
+          }
+
+          .day {
+            color: $Medium-brown;
+            margin-top: 8px;
+          }
+        }
+      }
+
+      hr {
+        border-color: $Medium-brown;
+        margin: 32px 0px;
+      }
+
+      .bottom-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          p {
+            color: $Medium-brown;
+            margin-bottom: 8px;
+          }
+
+          h1 {
+            font-weight: 44px;
+            @include responsive-mixin(font-size, 44px, 32px);
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: $Medium-brown;
+            text-align: right;
+            justify-content: flex-end;
+
+            &.percantage-movement {
+              font-weight: 700;
+              color: $Dark-brown;
+              margin-bottom: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
