@@ -1,2 +1,7 @@
-<> Animate the graph on load,
-<> Focus state of the graph
+>< Animate the graph on load,
+>< Focus state of the graph
+>< Clicking
+    >< If value is being shown : stop showing the value
+    >< else : show the value
+
+<> Put in metadata details

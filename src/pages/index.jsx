@@ -19,7 +19,7 @@ function Graph({ day, amount, index, setIndexToShow, show }) {
         <motion.div
           animate={{ height: `${(amount / maxAmountSpent) * 100}%` }}
           className={className}
-          onClick={() => setIndexToShow(index)}
+          onClick={() => setIndexToShow(show ? null : index)}
           onMouseEnter={() => {
             setBln_progressBarHovered(true)
             console.log(bln_progressBarHovered)
