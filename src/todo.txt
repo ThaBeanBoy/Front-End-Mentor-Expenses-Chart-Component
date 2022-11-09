@@ -4,4 +4,4 @@
     >< If value is being shown : stop showing the value
     >< else : show the value
 
-<> Put in metadata details
+>< Put in metadata details

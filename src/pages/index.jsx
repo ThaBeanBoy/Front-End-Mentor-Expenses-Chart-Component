@@ -81,7 +81,34 @@ export default function Home() {
             </div>
           </div>
         </main>
+
+        <div className="attribution">
+          Challenge by{" "}
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          . Coded by{" "}
+          <a href="https://www.frontendmentor.io/profile/ThaBeanBoy">
+            ThaBeanBoy
+          </a>
+          .
+        </div>
       </div>
     </div>
+  )
+}
+
+export function Head() {
+  // return <title>My Title in Gatsby Project</title>
+  return (
+    <>
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./favicon-32x32.png"
+      ></link>
+      <title>Frontend Mentor | Expenses chart component</title>
+    </>
   )
 }
