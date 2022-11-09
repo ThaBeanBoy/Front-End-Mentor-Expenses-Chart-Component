@@ -1,0 +1,2 @@
+<> Animate the graph on load,
+<> Focus state of the graph
